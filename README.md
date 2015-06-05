@@ -2,10 +2,11 @@
 
 This guide will walk you through deploying a Go application on Deis.
 
+#test to work?
 ## Usage
 
 ```
-$ deis create
+$ deis createrrr:wQ
 Creating application... done, created luxury-waxworks
 Git remote deis added
 $ git push deis master
