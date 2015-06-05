@@ -19,7 +19,7 @@ func main() {
 	}
 }
 
-// poweredByHandler writes "Powered by $POWERED_BY" to the response.
+// poweredByHandler writes "Powered by $POWERED_BY Pro" to the response.
 func poweredByHandler(w http.ResponseWriter, r *http.Request) {
 	release := os.Getenv("DEIS_RELEASE")
 	if release == "" {
@@ -27,11 +27,11 @@ func poweredByHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	powered := os.Getenv("POWERED_BY")
 	if powered == "" {
-		powered = "Deis"
+		powered = "Deis Pro"
 	}
 	// print the string to the ResponseWriter
 	hostname, _ := os.Hostname()
-	fmt.Fprintf(w, "Powered by %v\nRelease %v on %v\n", powered, release, hostname)
+	fmt.Fprintf(w, "Powered Yahoo by %v\nRelease %v on %v\n", powered, release, hostname)
 }
 
 // logRequestMiddleware writes out HTTP request information before passing to the next handler.
